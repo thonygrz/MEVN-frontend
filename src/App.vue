@@ -1,18 +1,14 @@
 <template>
   <v-app>
-    <v-content height="100%">
-      <div>
-        <Navbar :title="sectionName" />
-        <Sidebar
-          @setSectionName="setSectionName"
-          :isLogged="isLogged"
-          :isAdmin="isAdmin"
-          :isStorekeeper="isStorekeeper"
-          :isSeller="isSeller"
-        />
-        <router-view class="pl-14"></router-view>
-      </div>
-    </v-content>
+    <Navbar :title="sectionName" :isLogged="isLogged" />
+    <Sidebar
+      @setSectionName="setSectionName"
+      :isLogged="isLogged"
+      :isAdmin="isAdmin"
+      :isStorekeeper="isStorekeeper"
+      :isSeller="isSeller"
+    />
+    <router-view class="pl-14 pt-16"></router-view>
   </v-app>
 </template>
 
@@ -59,5 +55,3 @@ export default {
   },
 }
 </script>
-
-<style scoped></style>

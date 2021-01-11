@@ -15,10 +15,10 @@
           @click="goRoute('Home', 'Inicio')"
           v-if="isAdmin || isSeller || isStorekeeper"
         >
-          <v-list-item-title>Inicio</v-list-item-title>
           <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
+            <v-icon color="primary">mdi-home</v-icon>
           </v-list-item-icon>
+          <v-list-item-title>Inicio</v-list-item-title>
         </v-list-item>
         <v-list-group no-action sub-group v-if="isAdmin || isStorekeeper">
           <template v-slot:activator>
@@ -32,10 +32,10 @@
             link
             @click="goRoute(item.route, item.title)"
           >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
             <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon color="primary">{{ item.icon }}</v-icon>
             </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list-group>
 
@@ -51,10 +51,10 @@
             link
             @click="goRoute(item.route, item.title)"
           >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
             <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon color="primary">{{ item.icon }}</v-icon>
             </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list-group>
 
@@ -70,10 +70,10 @@
             link
             @click="goRoute(item.route, item.title)"
           >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
             <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon color="primary">{{ item.icon }}</v-icon>
             </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list-group>
 
@@ -89,10 +89,10 @@
             link
             @click="goRoute(item.route, item.title)"
           >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
             <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon color="primary">{{ item.icon }}</v-icon>
             </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list-group>
 
@@ -112,17 +112,20 @@
             link
             @click="goRoute(item.route, item.title)"
           >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
             <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
+              <v-icon color="primary">{{ item.icon }}</v-icon>
             </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
           </v-list-item>
         </v-list-group>
       </v-list-item-group>
     </v-list>
     <template v-slot:append>
       <div class="pa-2">
-        <v-btn @click="logout" color="secondary" block>
+        <v-btn @click="logout" depressed block>
+          <v-icon class="mr-5" color="secondary" left>
+            mdi-logout
+          </v-icon>
           Cerrar sesión
         </v-btn>
       </div>

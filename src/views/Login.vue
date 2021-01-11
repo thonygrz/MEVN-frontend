@@ -1,11 +1,12 @@
 <template>
-  <v-container fluid fill-height>
-    <v-row class="justify-center" align="center">
-      <v-col sm="5">
+  <v-container fill-height fluid>
+    <v-row class="justify-center">
+      <v-col sm="10" md="4">
         <v-card>
-          <v-card-title>
-            Iniciar sesión
+          <v-card-title class="justify-center">
+            Compras y Ventas
           </v-card-title>
+          <v-divider></v-divider>
           <v-form ref="form">
             <v-card-text>
               <v-text-field
@@ -28,7 +29,7 @@
               </p>
             </v-card-text>
             <v-card-actions>
-              <v-btn :loading="load" color="secondary" block @click="login"
+              <v-btn :loading="load" color="primary" block @click="login"
                 >Iniciar sesión</v-btn
               >
             </v-card-actions>
@@ -82,5 +83,3 @@ export default {
   },
 }
 </script>
-
-<style></style>
